@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  transition: 0.5s;
+}
+
+/* ================ Colors ================ */
+
+/* ===================> Primary colors */
+
+:root {
+  --clr-lime-green: hsl(163, 72%, 41%);
+  --clr-bright-red: hsl(356, 69%, 56%);
+  --clr-facebook: hsl(208, 92%, 53%);
+  --clr-twitter: hsl(203, 89%, 53%);
+  --clr-instagram: linear-gradient(red, yellow);
+  --clr-youTube: hsl(348, 97%, 39%);
+
+  /* ===================> Botton colors */
+  --clr-toggle-dark: hsl(210, 78%, 56%);
+
+  --clr-toggle-light: hsl(146, 68%, 55%);
+}
+
+/* ===================> Dark Mode Colors */
+.dark-mode {
+  --clr-bg: hsl(230, 17%, 14%);
+  --clr-top-bg-pattern: hsl(232, 19%, 15%);
+  --clr-card-bg: hsl(228, 28%, 20%);
+  --clr-text-pri: hsl(228, 34%, 66%);
+  --clr-text-sec: hsl(0, 0%, 100%);
+}
+
+/* ===================> Light Mode Colors */
+.light-mode {
+  --clr-bg: hsl(0, 0%, 100%);
+  --clr-top-bg-pattern: hsl(225, 100%, 98%);
+  --clr-card-bg: hsl(227, 47%, 96%);
+  --clr-text-sec: hsl(228, 12%, 44%);
+  --clr-text-pri: hsl(230, 17%, 14%);
+}
+
+img {
+  max-width: 100%;
+}
+/* ================================ General/Resuseable element ================================ */
+.wrapper {
+  background: var(--clr-bg);
+  /* max-width: 375px; */
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* .main {
+  padding-top: 2rem;
+} */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+
+.h1 {
+  font-weight: 900;
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 0.8rem;
+}
+
+.h4 {
+  font-weight: 400;
+}
+
+.card {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background: var(--clr-card-bg);
+  border-radius: 10px;
+  padding: 1.8rem;
+}
+.fa-twitter {
+  color: var(--clr-twitter);
+}
+
+.fa-facebook-square {
+  color: var(--clr-facebook);
+}
+
+.fa-instagram {
+  color: red;
+}
+
+.fa-youtube-square {
+  color: var(--clr-youTube);
+}
+
+/* ================================ HEADER ================================ */
+.header {
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 2rem;
+  position: relative;
+}
+
+.header-text .h2 {
+  color: var(--clr-text-pri);
+}
+
+.header-text .h3 {
+  color: var(--clr-text-sec);
+}
+
+.header-text::before {
+  content: "";
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--clr-text-sec);
+}
+
+.theme {
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 0.7rem;
+}
+
+.dark-mode-text {
+  color: var(--clr-text-sec);
+  font-size: 0.7em;
+  font-weight: 400;
+}
+/* ================================ TOGGLE ================================ */
+
+/* ===================> The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 24px;
+}
+
+/* ===================> Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* ===================> The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  /* right: 4px; */
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input + .slider {
+  background-color: var(--clr-toggle-light);
+}
+input:checked + .slider {
+  box-shadow: 0 0 1px var(--clr-toggle-dark);
+}
+
+input:focus + .slider {
+  background-color: var(--clr-toggle-dark);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/*  ===================> Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ================================ TOGGLE END ================================ */
+
+/* ================================ MAIN ================================ */
+
+/* ===================> Followers Group Card */
+.followers-group {
+  padding: 2rem 0;
+}
+
+.account {
+  align-items: center;
+  justify-content: center;
+  gap: 0.8em;
+}
+
+.account-icon {
+  font-size: 2rem;
+  color: var(--clr-text-sec);
+}
+.followers .h1 {
+  text-align: center;
+}
+.sub-heading {
+  color: var(--clr-text-sec);
+  letter-spacing: 0.3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.positive-stat {
+  color: var(--clr-lime-green);
+}
+
+.negative-stat {
+  color: var(--clr-bright-red);
+}
+
+.stats {
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-img {
+  /* width: 50px; */
+  padding-bottom: 5px;
+}
+
+.card-facebook {
+  border-top: 6px solid var(--clr-facebook);
+}
+
+.card-twitter {
+  border-top: 6px solid var(--clr-twitter);
+}
+
+.card-instagram {
+  border-top: 6px solid red;
+}
+
+.card-youtube {
+  border-top: 6px solid var(--clr-youTube);
+}
+
+/* ===================> Overview Card */
+.overview .h2 {
+  color: var(--clr-text-sec);
+  padding-bottom: 1rem;
+}
+.overview-card {
+  /* margin-top: 1rem; */
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row + .row {
+  padding-top: 1rem;
+}
+
+.title {
+  font-size: 0.8rem;
+  color: var(--clr-text-sec);
+  font-weight: 400;
+}
+
+.row-icon {
+  font-size: 1.4rem;
+}
+
+.row-h2 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: var(--clr-text-pri);
+}
+/* ================================ Media Queries ================================ */
+
+/* Attribution */
+.attribution {
+  padding-top: 2rem;
+  color: var(--clr-text-sec);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.attribution a {
+  color: var(--clr-text-pri);
+  transition: 0.5s;
+}
+
+.attribution a:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 770px) {
+  .wrapper {
+    max-width: 1440px;
+  }
+
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .theme {
+    width: 50%;
+  }
+  .header-text::before {
+    height: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1128px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

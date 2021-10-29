@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="light-mode" id="body">
+    <div class="wrapper">
+      <div class="container">
+        <div class="header flex">
+          <div class="header-text">
+            <h2 class="h2">Social Media Dashboard</h2>
+            <h3 class="h3">Total Followers: 23,004</h3>
+          </div>
+
+          <div class="theme flex">
+            <label class="dark-mode-text">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" name="theme" id="btn" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+        <main class="main">
+          <div class="followers-group grid">
+            <div class="card flex card-facebook">
+              <div class="account flex">
+                <div class="account-icon">
+                  <i class="fab fa-facebook-square"></i>
+                </div>
+                <div class="account-username">@nathanf</div>
+              </div>
+              <div class="followers">
+                <h1 class="h1">1987</h1>
+                <h3 class="h4 sub-heading">Followers</h3>
+              </div>
+              <div class="stats flex">
+                <div class="stats-img">
+                  <img src="./images/icon-up.svg" alt="" />
+                </div>
+
+                <p class="stats-value positive-stat">12 Today</p>
+              </div>
+            </div>
+
+            <div class="card flex card-twitter">
+              <div class="account flex">
+                <div class="account-icon">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="account-username">@nathanf</div>
+              </div>
+              <div class="followers">
+                <h1 class="h1">1044</h1>
+                <h3 class="h4 sub-heading">Followers</h3>
+              </div>
+              <div class="stats flex">
+                <div class="stats-img">
+                  <img src="./images/icon-up.svg" alt="" />
+                </div>
+
+                <p class="stats-value positive-stat">99 Today</p>
+              </div>
+            </div>
+
+            <div class="card flex card-instagram">
+              <div class="account flex">
+                <div class="account-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div class="account-username">@nathanf</div>
+              </div>
+              <div class="followers">
+                <h1 class="h1">11K</h1>
+                <h3 class="h4 sub-heading">Followers</h3>
+              </div>
+              <div class="stats flex">
+                <div class="stats-img">
+                  <img src="./images/icon-up.svg" alt="" />
+                </div>
+
+                <p class="stats-value positive-stat">1099 Today</p>
+              </div>
+            </div>
+
+            <div class="card flex card-youtube">
+              <div class="account flex">
+                <div class="account-icon">
+                  <i class="fab fa-youtube-square"></i>
+                </div>
+                <div class="account-username">Nathan F.</div>
+              </div>
+              <div class="followers">
+                <h1 class="h1">8239</h1>
+                <h3 class="h4 sub-heading">Subscribers</h3>
+              </div>
+              <div class="stats flex">
+                <div class="stats-img">
+                  <img src="./images/icon-down.svg" alt="" />
+                </div>
+
+                <p class="stats-value negative-stat">144 Today</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="overview">
+            <h1 class="h2">Overview - Today</h1>
+
+            <div class="grid">
+              <div class="card overview-card">
+                <div class="row flex">
+                  <p class="title">Page Views</p>
+
+                  <div class="row-icon">
+                    <i class="fab fa-facebook-square"></i>
+                  </div>
+                </div>
+                <div class="row flex">
+                  <h2 class="row-h2">87</h2>
+
+                  <div class="stats flex">
+                    <div class="stats-img">
+                      <img src="./images/icon-up.svg" alt="" />
+                    </div>
+                    <p class="row-p positive-stat">3%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card overview-card">
+                <div class="row flex">
+                  <p class="title">Likes</p>
+
+                  <div class="row-icon">
+                    <i class="fab fa-facebook-square"></i>
+                  </div>
+                </div>
+                <div class="row flex">
+                  <h2 class="row-h2">52</h2>
+
+                  <div class="stats flex">
+                    <div class="stats-img">
+                      <img src="./images/icon-down.svg" alt="" />
+                    </div>
+                    <p class="row-p negative-stat">2%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card overview-card">
+                <div class="row flex">
+                  <p class="title">Likes</p>
+
+                  <div class="row-icon">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="row flex">
+                  <h2 class="row-h2">5462</h2>
+
+                  <div class="stats flex">
+                    <div class="stats-img">
+                      <img src="./images/icon-up.svg" alt="" />
+                    </div>
+                    <p class="row-p positive-stat">2257%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card overview-card">
+                <div class="row flex">
+                  <p class="title">Profile Views</p>
+
+                  <div class="row-icon">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="row flex">
+                  <h2 class="row-h2">52K</h2>
+
+                  <div class="stats flex">
+                    <div class="stats-img">
+                      <img src="./images/icon-up.svg" alt="" />
+                    </div>
+                    <p class="row-p positive-stat">1375%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card overview-card">
+                <div class="row flex">
+                  <p class="title">Retweets</p>
+
+                  <div class="row-icon">
+                    <i class="fab fa-twitter"></i>
+                  </div>
+                </div>
+                <div class="row flex">
+                  <h2 class="row-h2">117</h2>
+
+                  <div class="stats flex">
+                    <div class="stats-img">
+                      <img src="./images/icon-up.svg" alt="" />
+                    </div>
+                    <p class="row-p positive-stat">303%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card overview-card">
+                <div class="row flex">
+                  <p class="title">Likes</p>
+
+                  <div class="row-icon">
+                    <i class="fab fa-twitter"></i>
+                  </div>
+                </div>
+                <div class="row flex">
+                  <h2 class="row-h2">507</h2>
+
+                  <div class="stats flex">
+                    <div class="stats-img">
+                      <img src="./images/icon-up.svg" alt="" />
+                    </div>
+                    <p class="row-p positive-stat">553%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card overview-card">
+                <div class="row flex">
+                  <p class="title">Likes</p>
+
+                  <div class="row-icon">
+                    <i class="fab fa-youtube-square"></i>
+                  </div>
+                </div>
+                <div class="row flex">
+                  <h2 class="row-h2">107</h2>
+
+                  <div class="stats flex">
+                    <div class="stats-img">
+                      <img src="./images/icon-down.svg" alt="" />
+                    </div>
+                    <p class="row-p negative-stat">19%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card overview-card">
+                <div class="row flex">
+                  <p class="title">Likes</p>
+
+                  <div class="row-icon">
+                    <i class="fab fa-youtube-square"></i>
+                  </div>
+                </div>
+                <div class="row flex">
+                  <h2 class="row-h2">1407</h2>
+
+                  <div class="stats flex">
+                    <div class="stats-img">
+                      <img src="./images/icon-down.svg" alt="" />
+                    </div>
+                    <p class="row-p negative-stat">12%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://twitter.com/gmcodes20?s=20">Godwin Martins</a>.
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
